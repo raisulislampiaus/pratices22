@@ -74,7 +74,7 @@ router.post("/create", uploadOptions.single('image'), async (req, res) => {
     // const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
     let product = new ItemModel({
       name: req.body.name,
-      // image: `${basePath}${fileName}`,
+      image: req.body.image,
       code: req.body.code,
       category: req.body.category,
       sizeCategory: req.body.sizeCategory,
