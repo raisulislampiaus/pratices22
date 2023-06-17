@@ -21,10 +21,10 @@ const itemsSchema = mongoose.Schema({
   smallDescription: { type: String },
   largeDescription: { type: String },
 
-  image: {
-    type: String,
-    default: ''
-  },
+  // image: {
+  //   type: String,
+  //   default: ''
+  // },
 
 }, { timestamps: true });
 
