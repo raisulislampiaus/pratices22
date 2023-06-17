@@ -67,14 +67,14 @@ router.post("/create", uploadOptions.single('image'), async (req, res) => {
     const sizeCategory = await SizeCategory.findById(req.body.sizeCategory);
     if (!sizeCategory) return res.status(400).send('Invalid sizeCategory');
 
-    const file = req.file;
-    if (!file) return res.status(400).send('No image in the request');
+    // const file = req.file;
+    // if (!file) return res.status(400).send('No image in the request');
 
-    const fileName = file.filename;
-    const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
+    // const fileName = file.filename;
+    // const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
     let product = new ItemModel({
       name: req.body.name,
-      image: `${basePath}${fileName}`,
+      // image: `${basePath}${fileName}`,
       code: req.body.code,
       category: req.body.category,
       sizeCategory: req.body.sizeCategory,
