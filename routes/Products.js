@@ -56,7 +56,7 @@ router.get(`/:id`, async (req, res) => {
   res.send(product);
 });
 
-router.post("/", uploadOptions.single('image'), async (req, res) => {
+router.post("/create", uploadOptions.single('image'), async (req, res) => {
 
   try {
     const category = await Category.findById(req.body.category);
